@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="borderPane" fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5; -fx-border-style: solid; -fx-border-width: 10px;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.TimexController">
+   <top>
+      <HBox fx:id="timerBox" alignment="CENTER" prefHeight="76.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="timerText" strokeType="OUTSIDE" strokeWidth="0.0" text="00:00:00:000" textAlignment="CENTER">
+               <font>
+                  <Font name="Ebrima" size="57.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox fx:id="buttonBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="start" mnemonicParsing="false" onAction="#start" prefHeight="28.0" prefWidth="64.0" text="Start">
+               <font>
+                  <Font name="Agency FB" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="stop" mnemonicParsing="false" onAction="#stop" prefHeight="28.0" prefWidth="64.0" text="Stop">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="reset" mnemonicParsing="false" onAction="#reset" prefHeight="28.0" prefWidth="64.0" text="Reset">
+               <font>
+                  <Font name="Agency FB" size="15.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="imageContainer" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="dialImageView" fitHeight="213.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="handImageView" fitHeight="209.0" fitWidth="218.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+               <image>
+                  <Image url="@hand.png" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
